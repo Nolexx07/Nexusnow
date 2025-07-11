@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexusnow - Order Confirmation</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/payment.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html"><i class="fas fa-shopping-basket"></i> Nexusnow</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="grocery.html">Grocery</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li><a href="transport.html">Transport</a></li>
+        <li><a href="orders.html"><i class="fas fa-box"></i> Orders</a></li>
+        <li><a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a></li>
+        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> <span class="cart-count" id="cart-count">0</span></a></li>
+        <li><button id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+      <button class="hamburger" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+  <main class="main-container">
+    <!-- Step Indicator -->
+    <div class="checkout-steps">
+      <div class="step completed"><span class="step-icon"><i class="fas fa-shopping-cart"></i></span>Cart</div>
+      <div class="step completed"><span class="step-icon"><i class="fas fa-map-marker-alt"></i></span>Address</div>
+      <div class="step completed"><span class="step-icon"><i class="fas fa-credit-card"></i></span>Payment</div>
+      <div class="step active"><span class="step-icon"><i class="fas fa-check-circle"></i></span>Done</div>
+      <div class="checkout-progress"><div class="progress-bar done"></div></div>
+    </div>
+    <section class="done-section enhanced-payment">
+      <div class="done-icon"><i class="fas fa-check-circle"></i></div>
+      <h1>Order Confirmed!</h1>
+      <p class="done-message">Thank you for your purchase. Your order has been placed successfully.</p>
+      <div class="done-actions">
+        <a href="orders.html" class="done-btn">View My Orders</a>
+        <a href="index.html" class="done-btn secondary">Back to Home</a>
+      </div>
+      <!-- Optionally, show order summary here -->
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+  <script src="js/order-utils.js"></script>
+</body>
+</html> 

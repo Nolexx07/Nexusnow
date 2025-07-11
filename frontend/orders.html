@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexusnow - Order Summary</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/orders.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html"><i class="fas fa-shopping-basket"></i> Nexusnow</a>
+      </div>
+      <div class="desktop-search" style="display: flex; align-items: center; margin-left: 1.5rem;">
+        <input type="text" placeholder="Search..." class="desktop-search-input" style="padding: 0.4rem 0.8rem; border-radius: 1.2rem; border: 1px solid #e5e7eb; font-size: 1rem; min-width: 180px; max-width: 240px;">
+        <button class="desktop-search-btn" style="background: none; border: none; color: #2563eb; font-size: 1.2rem; margin-left: 0.2rem; cursor: pointer;"><i class="fas fa-search"></i></button>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="grocery.html">Grocery</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li><a href="transport.html">Transport</a></li>
+        <li><a href="orders.html"><i class="fas fa-box"></i> Orders</a></li>
+        <li><a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a></li>
+        <li><a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> <span class="cart-count" id="cart-count">0</span></a></li>
+        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+        <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="helpcenter.html"><i class="fas fa-question-circle"></i> Help Center</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><button id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+      <button class="hamburger" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+  <header>
+    <div class="top-appbar">
+      <div class="top-appbar-row">
+        <a href="index.html" class="top-appbar-logo"><i class="fas fa-shopping-basket"></i> Nexusnow</a>
+      </div>
+      <div class="top-appbar-search">
+        <input type="text" placeholder="Search products, brands, categories..." id="index-search-input">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+        <button class="scan-btn"><i class="fas fa-qrcode"></i></button>
+      </div>
+    </div>
+  </header>
+  <nav class="bottom-nav">
+    <a href="index.html" class="bottom-nav-link"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="grocery.html" class="bottom-nav-link"><i class="fas fa-shopping-basket"></i><span>Grocery</span></a>
+    <a href="shopping.html" class="bottom-nav-link"><i class="fas fa-tshirt"></i><span>Shop</span></a>
+    <a href="cart.html" class="bottom-nav-link"><i class="fas fa-shopping-cart"></i><span>Cart</span></a>
+    <a href="profile.html" class="bottom-nav-link"><i class="fas fa-user"></i><span>Profile</span></a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="orders-hero">
+    <div class="hero-container">
+      <div class="hero-content" data-aos="fade-right">
+        <h1>Order Summary & History</h1>
+        <p>Track your orders, view purchase history, and manage your shopping experience with Nexusnow.</p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number" id="total-orders">0</span>
+            <span class="stat-label">Total Orders</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" id="total-spent">$0</span>
+            <span class="stat-label">Total Spent</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" id="active-orders">0</span>
+            <span class="stat-label">Active Orders</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image" data-aos="fade-left">
+        <i class="fas fa-chart-line"></i>
+        <div class="floating-card card-1"><i class="fas fa-shipping-fast"></i> Fast Delivery</div>
+        <div class="floating-card card-2"><i class="fas fa-check-circle"></i> Order Tracking</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Summary Cards -->
+  <section class="summary-cards" data-aos="fade-up">
+    <div class="container">
+      <div class="cards-grid">
+        <div class="summary-card">
+          <div class="card-icon">
+            <i class="fas fa-shopping-bag"></i>
+          </div>
+          <div class="card-content">
+            <h3>Recent Orders</h3>
+            <p class="card-number" id="recent-orders">0</p>
+            <p class="card-description">Orders in the last 30 days</p>
+          </div>
+        </div>
+        <div class="summary-card">
+          <div class="card-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div class="card-content">
+            <h3>Pending Orders</h3>
+            <p class="card-number" id="pending-orders">0</p>
+            <p class="card-description">Orders being processed</p>
+          </div>
+        </div>
+        <div class="summary-card">
+          <div class="card-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="card-content">
+            <h3>Average Rating</h3>
+            <p class="card-number" id="avg-rating">0.0</p>
+            <p class="card-description">Your order satisfaction</p>
+          </div>
+        </div>
+        <div class="summary-card">
+          <div class="card-icon">
+            <i class="fas fa-gift"></i>
+          </div>
+          <div class="card-content">
+            <h3>Rewards Points</h3>
+            <p class="card-number" id="reward-points">0</p>
+            <p class="card-description">Available for redemption</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter and Search -->
+  <section class="orders-controls" data-aos="fade-up">
+    <div class="container">
+      <div class="controls-wrapper">
+        <div class="search-box">
+          <input type="text" id="order-search" placeholder="Search orders by ID, product, or status...">
+          <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="filter-controls">
+          <select id="status-filter">
+            <option value="">All Status</option>
+            <option value="pending">Pending</option>
+            <option value="processing">Processing</option>
+            <option value="shipped">Shipped</option>
+            <option value="delivered">Delivered</option>
+            <option value="cancelled">Cancelled</option>
+          </select>
+          <select id="date-filter">
+            <option value="">All Time</option>
+            <option value="7">Last 7 days</option>
+            <option value="30">Last 30 days</option>
+            <option value="90">Last 3 months</option>
+            <option value="365">Last year</option>
+          </select>
+          <button class="refresh-btn" onclick="refreshOrders()">
+            <i class="fas fa-sync-alt"></i> Refresh
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Orders List -->
+  <main class="main-container">
+    <section class="orders-section" data-aos="fade-up">
+      <div class="orders-header">
+        <h2>Order History</h2>
+        <div class="orders-count">
+          <span id="orders-count">0</span> orders found
+        </div>
+      </div>
+      
+      <div class="orders-list" id="orders-list">
+        <!-- Populated by JS -->
+      </div>
+      
+      <div class="orders-empty" id="orders-empty" style="display: none;">
+        <div class="empty-icon">
+          <i class="fas fa-box-open"></i>
+        </div>
+        <h3>No Orders Found</h3>
+        <p>You haven't placed any orders yet. Start shopping to see your order history here!</p>
+        <a href="grocery.html" class="start-shopping-btn">
+          <i class="fas fa-shopping-cart"></i> Start Shopping
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Order Details Modal -->
+  <div class="order-modal-overlay" id="order-modal-overlay"></div>
+  <div class="order-modal" id="order-modal">
+    <div class="order-modal-content" id="order-modal-content">
+      <!-- Populated by JS -->
+    </div>
+    <button class="close-modal" id="close-order-modal" aria-label="Close order details">&times;</button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fas fa-shopping-basket"></i>
+            <span>Nexusnow</span>
+          </div>
+          <p>Your one-stop destination for groceries, shopping, and travel bookings.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="grocery.html">Grocery</a></li>
+            <li><a href="shopping.html">Shopping</a></li>
+            <li><a href="transport.html">Transport</a></li>
+            <li><a href="#deals">Deals & Offers</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#help">Help Center</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#returns">Returns</a></li>
+            <li><a href="#tracking">Track Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#press">Press</a></li>
+            <li><a href="#partners">Partners</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Download App</h3>
+          <div class="app-downloads">
+            <a href="#" class="app-btn">
+              <i class="fab fa-apple"></i>
+              <div>
+                <span>Download on the</span>
+                <strong>App Store</strong>
+              </div>
+            </a>
+            <a href="#" class="app-btn">
+              <i class="fab fa-google-play"></i>
+              <div>
+                <span>Get it on</span>
+                <strong>Google Play</strong>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2024 Nexusnow. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="#cookies">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/order-utils.js"></script>
+  <script src="js/orders.js"></script>
+  <script src="js/search.js"></script>
+  <div id="toast-container"></div>
+</body>
+</html> 

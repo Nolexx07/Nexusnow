@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile & Settings - Nexusnow</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html"><i class="fas fa-shopping-basket"></i> Nexusnow</a>
+      </div>
+      <div class="desktop-search" style="display: flex; align-items: center; margin-left: 1.5rem;">
+        <input type="text" placeholder="Search..." class="desktop-search-input" style="padding: 0.4rem 0.8rem; border-radius: 1.2rem; border: 1px solid #e5e7eb; font-size: 1rem; min-width: 180px; max-width: 240px;">
+        <button class="desktop-search-btn" style="background: none; border: none; color: #2563eb; font-size: 1.2rem; margin-left: 0.2rem; cursor: pointer;"><i class="fas fa-search"></i></button>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="grocery.html">Grocery</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li><a href="transport.html">Transport</a></li>
+        <li><a href="orders.html"><i class="fas fa-box"></i> Orders</a></li>
+        <li><a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a></li>
+        <li><a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> <span class="cart-count" id="cart-count">0</span></a></li>
+        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+        <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="helpcenter.html"><i class="fas fa-question-circle"></i> Help Center</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><button id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+      <button class="hamburger" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+  <header>
+    <div class="top-appbar">
+      <div class="top-appbar-row">
+        <a href="index.html" class="top-appbar-logo"><i class="fas fa-shopping-basket"></i> Nexusnow</a>
+      </div>
+      <div class="top-appbar-search">
+        <input type="text" placeholder="Search products, brands, categories..." id="index-search-input">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+        <button class="scan-btn"><i class="fas fa-qrcode"></i></button>
+      </div>
+    </div>
+  </header>
+  <nav class="bottom-nav">
+    <a href="index.html" class="bottom-nav-link"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="grocery.html" class="bottom-nav-link"><i class="fas fa-shopping-basket"></i><span>Grocery</span></a>
+    <a href="shopping.html" class="bottom-nav-link"><i class="fas fa-tshirt"></i><span>Shop</span></a>
+    <a href="cart.html" class="bottom-nav-link"><i class="fas fa-shopping-cart"></i><span>Cart</span></a>
+    <a href="profile.html" class="bottom-nav-link"><i class="fas fa-user"></i><span>Profile</span></a>
+  </nav>
+
+  <!-- Profile Header -->
+  <header class="profile-header">
+    <div class="container">
+      <div class="profile-banner">
+        <div class="profile-cover">
+          <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=80" alt="Profile Cover">
+          <div class="profile-avatar">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80" alt="User Avatar" id="user-avatar">
+          </div>
+        </div>
+        <div class="profile-info">
+          <h1 id="user-name">John Doe</h1>
+          <p id="user-email">john.doe@example.com</p>
+          <div class="profile-stats">
+            <div class="stat">
+              <span class="stat-number" id="orders-count">24</span>
+              <span class="stat-label">Orders</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" id="reviews-count">12</span>
+              <span class="stat-label">Reviews</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" id="wishlist-count">8</span>
+              <span class="stat-label">Wishlist</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" id="points-count">1,250</span>
+              <span class="stat-label">Points</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="profile-main">
+    <div class="container">
+      <div class="profile-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="profile-sidebar">
+          <nav class="profile-nav">
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a href="#profile-section" class="nav-link active" data-section="profile-section">
+                  <i class="fas fa-user"></i>
+                  <span>Profile</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#account-section" class="nav-link" data-section="account-section">
+                  <i class="fas fa-cog"></i>
+                  <span>Account</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#security-section" class="nav-link" data-section="security-section">
+                  <i class="fas fa-shield-alt"></i>
+                  <span>Security</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#notifications-section" class="nav-link" data-section="notifications-section">
+                  <i class="fas fa-bell"></i>
+                  <span>Notifications</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#privacy-section" class="nav-link" data-section="privacy-section">
+                  <i class="fas fa-lock"></i>
+                  <span>Privacy</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#preferences-section" class="nav-link" data-section="preferences-section">
+                  <i class="fas fa-sliders-h"></i>
+                  <span>Preferences</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#billing-section" class="nav-link" data-section="billing-section">
+                  <i class="fas fa-credit-card"></i>
+                  <span>Billing</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#help-section" class="nav-link" data-section="help-section">
+                  <i class="fas fa-question-circle"></i>
+                  <span>Help</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <!-- Content Area -->
+        <div class="profile-content">
+          <!-- Profile Section -->
+          <section id="profile-section" class="content-section active">
+            <div class="section-header">
+              <h2>Profile Information</h2>
+              <p>Manage your personal information and profile details</p>
+            </div>
+            <form class="profile-form" id="profile-form">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name" name="firstName" value="John" required>
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name" name="lastName" value="Doe" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" value="john.doe@example.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" value="+1 (555) 123-4567">
+                </div>
+                <div class="form-group full-width">
+                  <label for="bio">Bio</label>
+                  <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself...">Passionate shopper and travel enthusiast. Love exploring new products and destinations.</textarea>
+                </div>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                  <i class="fas fa-save"></i> Save Changes
+                </button>
+                <button type="button" class="btn btn-secondary" onclick="profileApp.resetProfileForm()">
+                  <i class="fas fa-undo"></i> Reset
+                </button>
+              </div>
+            </form>
+          </section>
+
+          <!-- Account Section -->
+          <section id="account-section" class="content-section">
+            <div class="section-header">
+              <h2>Account Settings</h2>
+              <p>Manage your account preferences and settings</p>
+            </div>
+            <div class="settings-grid">
+              <div class="setting-card">
+                <div class="setting-header">
+                  <div class="setting-icon">
+                    <i class="fas fa-language"></i>
+                  </div>
+                  <div class="setting-info">
+                    <h3>Language & Region</h3>
+                    <p>Choose your preferred language and region</p>
+                  </div>
+                </div>
+                <div class="setting-content">
+                  <div class="form-group">
+                    <label for="language">Language</label>
+                    <select id="language" name="language">
+                      <option value="en" selected>English</option>
+                      <option value="es">Spanish</option>
+                      <option value="fr">French</option>
+                      <option value="de">German</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="theme">Theme</label>
+                    <select id="theme" name="theme">
+                      <option value="auto">Auto (System)</option>
+                      <option value="light" selected>Light</option>
+                      <option value="dark">Dark</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Security Section -->
+          <section id="security-section" class="content-section">
+            <div class="section-header">
+              <h2>Security Settings</h2>
+              <p>Manage your account security and authentication</p>
+            </div>
+            <div class="settings-grid">
+              <div class="setting-card">
+                <div class="setting-header">
+                  <div class="setting-icon">
+                    <i class="fas fa-key"></i>
+                  </div>
+                  <div class="setting-info">
+                    <h3>Password</h3>
+                    <p>Change your account password</p>
+                  </div>
+                </div>
+                <div class="setting-content">
+                  <form class="password-form" id="password-form">
+                    <div class="form-group">
+                      <label for="current-password">Current Password</label>
+                      <input type="password" id="current-password" name="currentPassword" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="new-password">New Password</label>
+                      <input type="password" id="new-password" name="newPassword" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="confirm-password">Confirm New Password</label>
+                      <input type="password" id="confirm-password" name="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                      <i class="fas fa-key"></i> Update Password
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Notifications Section -->
+          <section id="notifications-section" class="content-section">
+            <div class="section-header">
+              <h2>Notification Preferences</h2>
+              <p>Choose how and when you want to be notified</p>
+            </div>
+            <div class="settings-grid">
+              <div class="setting-card">
+                <div class="setting-header">
+                  <div class="setting-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                  </div>
+                  <div class="setting-info">
+                    <h3>Order Updates</h3>
+                    <p>Notifications about your orders</p>
+                  </div>
+                </div>
+                <div class="setting-content">
+                  <div class="notification-options">
+                    <label class="checkbox-label">
+                      <input type="checkbox" id="order-confirmation" name="orderConfirmation" checked>
+                      <span class="checkmark"></span>
+                      Order confirmation
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" id="order-shipping" name="orderShipping" checked>
+                      <span class="checkmark"></span>
+                      Shipping updates
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Privacy Section -->
+          <section id="privacy-section" class="content-section">
+            <div class="section-header">
+              <h2>Privacy Settings</h2>
+              <p>Control your privacy and data sharing preferences</p>
+            </div>
+            <div class="settings-grid">
+              <div class="setting-card">
+                <div class="setting-header">
+                  <div class="setting-icon">
+                    <i class="fas fa-eye"></i>
+                  </div>
+                  <div class="setting-info">
+                    <h3>Profile Visibility</h3>
+                    <p>Control who can see your profile information</p>
+                  </div>
+                </div>
+                <div class="setting-content">
+                  <div class="form-group">
+                    <label for="profile-visibility">Profile Visibility</label>
+                    <select id="profile-visibility" name="profileVisibility">
+                      <option value="public">Public</option>
+                      <option value="friends" selected>Friends Only</option>
+                      <option value="private">Private</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Preferences Section -->
+          <section id="preferences-section" class="content-section">
+            <div class="section-header">
+              <h2>Preferences</h2>
+              <p>Customize your shopping and browsing experience</p>
+            </div>
+            <div class="settings-grid">
+              <div class="setting-card">
+                <div class="setting-header">
+                  <div class="setting-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                  </div>
+                  <div class="setting-info">
+                    <h3>Shopping Preferences</h3>
+                    <p>Customize your shopping experience</p>
+                  </div>
+                </div>
+                <div class="setting-content">
+                  <div class="form-group">
+                    <label for="currency">Preferred Currency</label>
+                    <select id="currency" name="currency">
+                      <option value="USD" selected>USD ($)</option>
+                      <option value="EUR">EUR (€)</option>
+                      <option value="GBP">GBP (£)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Billing Section -->
+          <section id="billing-section" class="content-section">
+            <div class="section-header">
+              <h2>Billing & Subscriptions</h2>
+              <p>Manage your billing information and subscriptions</p>
+            </div>
+            <div class="settings-grid">
+              <div class="setting-card">
+                <div class="setting-header">
+                  <div class="setting-icon">
+                    <i class="fas fa-credit-card"></i>
+                  </div>
+                  <div class="setting-info">
+                    <h3>Payment Methods</h3>
+                    <p>Manage your saved payment methods</p>
+                  </div>
+                </div>
+                <div class="setting-content">
+                  <div class="payment-methods" id="payment-methods">
+                    <!-- Populated by JS -->
+                  </div>
+                  <button type="button" class="btn btn-primary" onclick="profileApp.addPaymentMethod()">
+                    <i class="fas fa-plus"></i> Add Payment Method
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Help Section -->
+          <section id="help-section" class="content-section">
+            <div class="section-header">
+              <h2>Help & Support</h2>
+              <p>Get help and find answers to your questions</p>
+            </div>
+            <div class="settings-grid">
+              <div class="setting-card">
+                <div class="setting-header">
+                  <div class="setting-icon">
+                    <i class="fas fa-headset"></i>
+                  </div>
+                  <div class="setting-info">
+                    <h3>Contact Support</h3>
+                    <p>Get in touch with our support team</p>
+                  </div>
+                </div>
+                <div class="setting-content">
+                  <div class="support-options">
+                    <button type="button" class="btn btn-primary" onclick="profileApp.contactSupport()">
+                      <i class="fas fa-envelope"></i> Email Support
+                    </button>
+                    <button type="button" class="btn btn-secondary" onclick="profileApp.liveChat()">
+                      <i class="fas fa-comments"></i> Live Chat
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Nexusnow</span>
+          </div>
+          <p>Your one-stop destination for groceries, shopping, and travel bookings.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="shopping.html">Shopping</a></li>
+            <li><a href="transport.html">Transport</a></li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2024 Nexusnow. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <div id="loading-overlay" class="loading-overlay">
+    <div class="loading-spinner">
+      <div class="spinner"></div>
+      <p>Loading...</p>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/search.js"></script>
+  <div id="toast-container"></div>
+</body>
+</html> 

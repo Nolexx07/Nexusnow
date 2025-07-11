@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexusnow - All-in-One Convenience Store</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html"><i class="fas fa-shopping-basket"></i> Nexusnow</a>
+      </div>
+      <div class="desktop-search" style="display: flex; align-items: center; margin-left: 1.5rem;">
+        <input type="text" placeholder="Search..." class="desktop-search-input" style="padding: 0.4rem 0.8rem; border-radius: 1.2rem; border: 1px solid #e5e7eb; font-size: 1rem; min-width: 180px; max-width: 240px;">
+        <button class="desktop-search-btn" style="background: none; border: none; color: #2563eb; font-size: 1.2rem; margin-left: 0.2rem; cursor: pointer;"><i class="fas fa-search"></i></button>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="grocery.html">Grocery</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li><a href="transport.html">Transport</a></li>
+        <li><a href="orders.html"><i class="fas fa-box"></i> Orders</a></li>
+        <li><a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a></li>
+        <li><a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> <span class="cart-count" id="cart-count">0</span></a></li>
+        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+        <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+        <li><a href="helpcenter.html"><i class="fas fa-question-circle"></i> Help Center</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><button id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+    </div>
+  </nav>
+  <header>
+    <!-- To change the color of the mobile nav, add the appropriate class below: top-appbar-grocery, top-appbar-shopping, top-appbar-transport, etc. -->
+    <div class="top-appbar"><!-- Example: <div class='top-appbar top-appbar-grocery'> for grocery page -->
+      <div class="top-appbar-row">
+        <a href="index.html" class="top-appbar-logo"><i class="fas fa-shopping-basket"></i> Nexusnow</a>
+      </div>
+      <div class="top-appbar-search">
+        <input type="text" placeholder="Search products, brands, categories..." id="index-search-input">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+        <button class="scan-btn"><i class="fas fa-qrcode"></i></button>
+      </div>
+    </div>
+  </header>
+  <nav class="bottom-nav">
+    <a href="index.html" class="bottom-nav-link"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="grocery.html" class="bottom-nav-link"><i class="fas fa-shopping-basket"></i><span>Grocery</span></a>
+    <a href="shopping.html" class="bottom-nav-link"><i class="fas fa-tshirt"></i><span>Shop</span></a>
+    <a href="cart.html" class="bottom-nav-link"><i class="fas fa-shopping-cart"></i><span>Cart</span></a>
+    <a href="profile.html" class="bottom-nav-link"><i class="fas fa-user"></i><span>Profile</span></a>
+  </nav>
+
+  <!-- Hero Banner Section -->
+  <header class="hero-banner">
+    <div class="hero-container">
+      <div class="hero-content" data-aos="fade-right">
+        <h1>Welcome to Nexusnow</h1>
+        <p>Your All-in-One Convenience Destination</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">10K+</span>
+            <span class="stat-label">Products</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Support</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">1M+</span>
+            <span class="stat-label">Customers</span>
+          </div>
+        </div>
+        <div class="hero-buttons">
+          <a href="grocery.html" class="hero-btn primary">
+            <i class="fas fa-shopping-basket"></i>
+            Shop Groceries
+          </a>
+          <a href="shopping.html" class="hero-btn secondary">
+            <i class="fas fa-tshirt"></i>
+            Explore Shopping
+          </a>
+        </div>
+      </div>
+      <div class="hero-image" data-aos="fade-left">
+        <div class="hero-image-container">
+          <img src="https://via.placeholder.com/400x300/2563eb/ffffff?text=Nexusnow" alt="Nexusnow Hero">
+          <div class="floating-card card-1">
+            <i class="fas fa-truck"></i>
+            <span>Fast Delivery</span>
+          </div>
+          <div class="floating-card card-2">
+            <i class="fas fa-shield-alt"></i>
+            <span>Secure</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="main-container">
+    <!-- Flash Deals Banner -->
+    <section class="flash-deals-banner" data-aos="fade-up">
+      <div class="container">
+        <div class="flash-deals-header">
+          <div class="flash-deals-title">
+            <i class="fas fa-bolt"></i>
+            <h2>Flash Deals</h2>
+            <span class="flash-badge">Limited Time</span>
+          </div>
+          <div class="flash-timer" id="flash-timer">
+            <span class="timer-label">Ends in:</span>
+            <div class="timer-display">
+              <div class="timer-unit">
+                <span class="timer-number" id="hours">02</span>
+                <span class="timer-label">Hours</span>
+              </div>
+              <div class="timer-separator">:</div>
+              <div class="timer-unit">
+                <span class="timer-number" id="minutes">45</span>
+                <span class="timer-label">Min</span>
+              </div>
+              <div class="timer-separator">:</div>
+              <div class="timer-unit">
+                <span class="timer-number" id="seconds">30</span>
+                <span class="timer-label">Sec</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flash-deals-grid">
+          <div class="flash-deal-card">
+            <div class="deal-badge">70% OFF</div>
+            <div class="deal-image">
+              <img src="assets/smart phone.jpg" alt="Smartphone Deal">
+            </div>
+            <div class="deal-content">
+              <h3>iPhone 13 Pro</h3>
+              <div class="price-container">
+                <span class="original-price">$999</span>
+                <span class="deal-price">$299</span>
+              </div>
+              <div class="deal-progress">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 85%"></div>
+                </div>
+                <span>85% claimed</span>
+              </div>
+              <button class="deal-btn">Buy Now</button>
+            </div>
+          </div>
+          <div class="flash-deal-card">
+            <div class="deal-badge">60% OFF</div>
+            <div class="deal-image">
+              <img src="assets/laptop.jpg" alt="Laptop Deal">
+            </div>
+            <div class="deal-content">
+              <h3>MacBook Air M2</h3>
+              <div class="price-container">
+                <span class="original-price">$1,199</span>
+                <span class="deal-price">$479</span>
+              </div>
+              <div class="deal-progress">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 92%"></div>
+                </div>
+                <span>92% claimed</span>
+              </div>
+              <button class="deal-btn">Buy Now</button>
+            </div>
+          </div>
+          <div class="flash-deal-card">
+            <div class="deal-badge">50% OFF</div>
+            <div class="deal-image">
+              <img src="assets/headphone deals.jpg" alt="Headphones Deal">
+            </div>
+            <div class="deal-content">
+              <h3>AirPods Pro</h3>
+              <div class="price-container">
+                <span class="original-price">$249</span>
+                <span class="deal-price">$124</span>
+              </div>
+              <div class="deal-progress">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 78%"></div>
+                </div>
+                <span>78% claimed</span>
+              </div>
+              <button class="deal-btn">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Navigation -->
+    <section class="category-nav" data-aos="fade-up">
+      <div class="container">
+        <div class="category-grid">
+          <a href="grocery.html" class="category-card grocery hover-lift">
+            <div class="category-icon">
+              <img src="assets/fresh vegitables.jpg" alt="Grocery Category" style="width:40px;height:40px;border-radius:50%;object-fit:cover;">
+            </div>
+            <h3>Grocery</h3>
+            <p>Fresh groceries delivered</p>
+            <div class="category-badge">20% OFF</div>
+          </a>
+          <a href="shopping.html" class="category-card shopping hover-lift">
+            <div class="category-icon">
+              <img src="assets/summer collection.jpg" alt="Shopping Category" style="width:40px;height:40px;border-radius:50%;object-fit:cover;">
+            </div>
+            <h3>Shopping</h3>
+            <p>Fashion & electronics</p>
+            <div class="category-badge">50% OFF</div>
+          </a>
+          <a href="transport.html" class="category-card transport hover-lift">
+            <div class="category-icon">
+              <img src="assets/beach restort.jpg" alt="Transport Category" style="width:40px;height:40px;border-radius:50%;object-fit:cover;">
+            </div>
+            <h3>Transport</h3>
+            <p>Book travel & transport</p>
+            <div class="category-badge">30% OFF</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Ad Banner -->
+    <section class="featured-ad-banner" data-aos="fade-up">
+      <div class="container">
+        <div class="ad-banner-grid">
+          <div class="ad-banner primary">
+            <div class="ad-content">
+              <div class="ad-badge">New Arrival</div>
+              <h2>Summer Collection 2024</h2>
+              <p>Discover the latest trends in fashion and lifestyle</p>
+              <div class="ad-features">
+                <span><i class="fas fa-check"></i> Free Shipping</span>
+                <span><i class="fas fa-check"></i> 30-Day Returns</span>
+                <span><i class="fas fa-check"></i> Premium Quality</span>
+              </div>
+              <a href="shopping.html" class="ad-btn">Shop Collection</a>
+            </div>
+            <div class="ad-image">
+              <img src="assets/summer collection.jpg" alt="Summer Collection">
+            </div>
+          </div>
+          <div class="ad-banner secondary">
+            <div class="ad-content">
+              <div class="ad-badge">Limited Time</div>
+              <h2>Tech Gadgets Sale</h2>
+              <p>Up to 70% off on premium electronics</p>
+              <div class="ad-stats">
+                <div class="ad-stat">
+                  <span class="stat-number">500+</span>
+                  <span class="stat-label">Products</span>
+                </div>
+                <div class="ad-stat">
+                  <span class="stat-number">24h</span>
+                  <span class="stat-label">Left</span>
+                </div>
+              </div>
+              <a href="shopping.html" class="ad-btn">Explore Deals</a>
+            </div>
+            <div class="ad-image">
+              <img src="assets/tech gadgets.jpg" alt="Tech Gadgets">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promotion Banners -->
+    <section class="promotion-banners" data-aos="fade-up">
+      <div class="container">
+        <div class="banner-grid">
+          <div class="promo-banner primary hover-lift">
+            <div class="banner-content">
+              <div class="banner-badge">Limited Time</div>
+              <h2>BigBasket Special</h2>
+              <p>Get 20% off on your first grocery order</p>
+              <div class="banner-timer" id="timer1">
+                <span class="timer-label">Ends in:</span>
+                <div class="timer-display">
+                  <span class="timer-unit">02</span>:
+                  <span class="timer-unit">45</span>:
+                  <span class="timer-unit">30</span>
+                </div>
+              </div>
+              <a href="grocery.html" class="banner-btn">Shop Now</a>
+            </div>
+            <div class="banner-image">
+              <i class="fas fa-percentage"></i>
+            </div>
+          </div>
+          <div class="promo-banner secondary hover-lift">
+            <div class="banner-content">
+              <div class="banner-badge">Hot Deal</div>
+              <h2>Flipkart Deals</h2>
+              <p>Up to 50% off on electronics</p>
+              <div class="banner-progress">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 75%"></div>
+                </div>
+                <span>75% claimed</span>
+              </div>
+              <a href="shopping.html" class="banner-btn">Explore</a>
+            </div>
+            <div class="banner-image">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+          </div>
+          <div class="promo-banner accent hover-lift">
+            <div class="banner-content">
+              <div class="banner-badge">New</div>
+              <h2>MakeMyTrip Offers</h2>
+              <p>Book flights & hotels at best prices</p>
+              <div class="banner-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span>4.8/5 (2.5k reviews)</span>
+              </div>
+              <a href="transport.html" class="banner-btn">Book Now</a>
+            </div>
+            <div class="banner-image">
+              <i class="fas fa-hotel"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trending Items Section -->
+    <section class="trending-section" data-aos="fade-up">
+      <div class="container">
+        <div class="section-header">
+          <h2>Trending Now</h2>
+          <div class="trending-tabs">
+            <button class="tab-btn active" data-category="all">All</button>
+            <button class="tab-btn" data-category="grocery">Grocery</button>
+            <button class="tab-btn" data-category="shopping">Shopping</button>
+            <button class="tab-btn" data-category="transport">Travel</button>
+          </div>
+        </div>
+        <div class="trending-grid" id="trending-grid">
+          <div class="trending-card" data-category="shopping">
+            <div class="trending-badge">Trending</div>
+            <div class="trending-image">
+              <img src="assets/wireless earbuds.jpg" alt="Wireless Earbuds">
+            </div>
+            <div class="trending-content">
+              <h3>Wireless Earbuds Pro</h3>
+              <div class="trending-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span>(1.2k reviews)</span>
+              </div>
+              <div class="trending-price">
+                <span class="current-price">$89</span>
+                <span class="original-price">$129</span>
+                <span class="discount">31% off</span>
+              </div>
+              <button class="trending-btn">Add to Cart</button>
+            </div>
+          </div>
+          <div class="trending-card" data-category="grocery">
+            <div class="trending-badge">Popular</div>
+            <div class="trending-image">
+              <img src="assets/organic fruits.jpg" alt="Organic Fruits">
+            </div>
+            <div class="trending-content">
+              <h3>Organic Fruit Basket</h3>
+              <div class="trending-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span>(856 reviews)</span>
+              </div>
+              <div class="trending-price">
+                <span class="current-price">$12.99</span>
+                <span class="original-price">$15.99</span>
+                <span class="discount">29% off</span>
+              </div>
+              <button class="trending-btn">Add to Cart</button>
+            </div>
+          </div>
+          <div class="trending-card" data-category="transport">
+            <div class="trending-badge">Hot Deal</div>
+            <div class="trending-image">
+              <img src="assets/beach restort.jpg" alt="Beach Resort">
+            </div>
+            <div class="trending-content">
+              <h3>Luxury Beach Resort</h3>
+              <div class="trending-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span>(2.1k reviews)</span>
+              </div>
+              <div class="trending-price">
+                <span class="current-price">$199/night</span>
+                <span class="original-price">$299/night</span>
+                <span class="discount">33% off</span>
+              </div>
+              <button class="trending-btn">Book Now</button>
+            </div>
+          </div>
+          <div class="trending-card" data-category="shopping">
+            <div class="trending-badge">New</div>
+            <div class="trending-image">
+              <img src="assets/smart watch.jpg" alt="Smart Watch">
+            </div>
+            <div class="trending-content">
+              <h3>Smart Watch Series 8</h3>
+              <div class="trending-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span>(3.4k reviews)</span>
+              </div>
+              <div class="trending-price">
+                <span class="current-price">$24.99</span>
+                <span class="original-price">$34.99</span>
+                <span class="discount">30% off</span>
+              </div>
+              <button class="trending-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Carousel Section (Trending Products) -->
+    <section class="product-carousel-section" data-aos="fade-up">
+      <div class="container">
+        <div class="section-header">
+          <h2>Trending Products</h2>
+          <div class="carousel-controls">
+            <button class="carousel-btn prev" id="carousel-prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn next" id="carousel-next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="product-carousel" id="product-carousel">
+          <div class="carousel-track">
+            <!-- Products will be dynamically loaded here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Sections -->
+    <section id="grocery" class="section-grocery product-section" data-aos="fade-up">
+      <div class="container">
+        <div class="section-header">
+          <h2>Fresh Groceries</h2>
+          <a href="grocery.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="product-grid" id="grocery-products">
+          <!-- Sample Grocery Products -->
+          <div class="product-card" data-category="grocery">
+            <div class="product-image">
+              <img src="assets/organic fruits.jpg" alt="Fresh Fruits">
+            </div>
+            <div class="product-info">
+              <h3>Fresh Organic Fruits</h3>
+              <div class="product-rating">
+                <span class="stars">★★★★★</span>
+                <span>(4.8)</span>
+              </div>
+              <div class="product-price">
+                <span class="price">$12.99</span>
+                <span class="original-price">$15.99</span>
+              </div>
+              <button class="add-cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          
+          <div class="product-card" data-category="grocery">
+            <div class="product-image">
+              <img src="assets/fresh vegitables.jpg" alt="Fresh Vegetables">
+            </div>
+            <div class="product-info">
+              <h3>Fresh Vegetables Pack</h3>
+              <div class="product-rating">
+                <span class="stars">★★★★★</span>
+                <span>(4.6)</span>
+              </div>
+              <div class="product-price">
+                <span class="price">$8.99</span>
+                <span class="original-price">$11.99</span>
+              </div>
+              <button class="add-cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          
+          <div class="product-card" data-category="grocery">
+            <div class="product-image">
+              <img src="assets/diary products images.jpg" alt="Dairy Products">
+            </div>
+            <div class="product-info">
+              <h3>Organic Dairy Products</h3>
+              <div class="product-rating">
+                <span class="stars">★★★★★</span>
+                <span>(4.7)</span>
+              </div>
+              <div class="product-price">
+                <span class="price">$6.99</span>
+                <span class="original-price">$8.99</span>
+              </div>
+              <button class="add-cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section class="special-offers-section" data-aos="fade-up">
+      <div class="container">
+        <div class="section-header">
+          <h2>Special Offers</h2>
+          <a href="#offers" class="view-all">View All Offers <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="offers-grid">
+          <div class="offer-card premium">
+            <div class="offer-header">
+              <div class="offer-badge">Premium</div>
+              <div class="offer-icon">
+                <i class="fas fa-crown"></i>
+              </div>
+            </div>
+            <div class="offer-content">
+              <h3>Premium Membership</h3>
+              <p>Get exclusive access to premium deals and early bird offers</p>
+              <div class="offer-benefits">
+                <span><i class="fas fa-check"></i> Free Express Delivery</span>
+                <span><i class="fas fa-check"></i> Priority Customer Support</span>
+                <span><i class="fas fa-check"></i> Exclusive Discounts</span>
+                <span><i class="fas fa-check"></i> Early Access to Sales</span>
+              </div>
+              <div class="offer-price">
+                <span class="price">$9.99</span>
+                <span class="period">/month</span>
+              </div>
+              <button class="offer-btn">Subscribe Now</button>
+            </div>
+          </div>
+          <div class="offer-card bundle">
+            <div class="offer-header">
+              <div class="offer-badge">Bundle</div>
+              <div class="offer-icon">
+                <i class="fas fa-box"></i>
+              </div>
+            </div>
+            <div class="offer-content">
+              <h3>Family Bundle Pack</h3>
+              <p>Perfect for families - save more with our bundle offers</p>
+              <div class="offer-benefits">
+                <span><i class="fas fa-check"></i> 3 Months Grocery Supply</span>
+                <span><i class="fas fa-check"></i> Free Home Delivery</span>
+                <span><i class="fas fa-check"></i> 15% Additional Discount</span>
+                <span><i class="fas fa-check"></i> Loyalty Points Bonus</span>
+              </div>
+              <div class="offer-price">
+                <span class="price">$299</span>
+                <span class="period">/bundle</span>
+              </div>
+              <button class="offer-btn">Get Bundle</button>
+            </div>
+          </div>
+          <div class="offer-card seasonal">
+            <div class="offer-header">
+              <div class="offer-badge">Seasonal</div>
+              <div class="offer-icon">
+                <i class="fas fa-sun"></i>
+              </div>
+            </div>
+            <div class="offer-content">
+              <h3>Summer Sale</h3>
+              <p>Beat the heat with our amazing summer collection deals</p>
+              <div class="offer-benefits">
+                <span><i class="fas fa-check"></i> Up to 60% Off</span>
+                <span><i class="fas fa-check"></i> Summer Essentials</span>
+                <span><i class="fas fa-check"></i> Free Cooling Items</span>
+                <span><i class="fas fa-check"></i> Extended Warranty</span>
+              </div>
+              <div class="offer-price">
+                <span class="price">$349</span>
+                <span class="period">off</span>
+              </div>
+              <button class="offer-btn">Shop Summer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section (Why Choose Nexusnow?) -->
+    <section class="features-section" data-aos="fade-up">
+      <div class="container">
+        <h2 class="section-title">Why Choose Nexusnow?</h2>
+        <div class="features-grid">
+          <div class="feature-card hover-lift" data-aos="zoom-in" data-aos-delay="100">
+            <div class="feature-icon">
+              <i class="fas fa-shipping-fast"></i>
+            </div>
+            <h3>Fast Delivery</h3>
+            <p>Same day delivery on groceries and express shipping on all orders</p>
+            <div class="feature-metric">
+              <span class="metric-number">2-4</span>
+              <span class="metric-unit">hours</span>
+            </div>
+          </div>
+          <div class="feature-card hover-lift" data-aos="zoom-in" data-aos-delay="200">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Secure Payments</h3>
+            <p>100% secure payment gateway with multiple payment options</p>
+            <div class="feature-metric">
+              <span class="metric-number">256</span>
+              <span class="metric-unit">bit SSL</span>
+            </div>
+          </div>
+          <div class="feature-card hover-lift" data-aos="zoom-in" data-aos-delay="300">
+            <div class="feature-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h3>24/7 Support</h3>
+            <p>Round the clock customer support for all your queries</p>
+            <div class="feature-metric">
+              <span class="metric-number">24/7</span>
+              <span class="metric-unit">support</span>
+            </div>
+          </div>
+          <div class="feature-card hover-lift" data-aos="zoom-in" data-aos-delay="400">
+            <div class="feature-icon">
+              <i class="fas fa-undo"></i>
+            </div>
+            <h3>Easy Returns</h3>
+            <p>Hassle-free returns and refunds within 30 days</p>
+            <div class="feature-metric">
+              <span class="metric-number">30</span>
+              <span class="metric-unit">days</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="shopping" class="section-shopping product-section" data-aos="fade-up">
+      <div class="container">
+        <div class="section-header">
+          <h2>Trending Products</h2>
+          <a href="shopping.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="product-grid" id="shopping-products">
+          <!-- Sample Shopping Products -->
+          <div class="product-card" data-category="shopping">
+            <div class="product-image">
+              <img src="assets/smart phone.jpg" alt="Smartphone">
+            </div>
+            <div class="product-info">
+              <h3>Latest Smartphone</h3>
+              <div class="product-rating">
+                <span class="stars">★★★★★</span>
+                <span>(4.9)</span>
+              </div>
+              <div class="product-price">
+                <span class="price">$699.99</span>
+                <span class="original-price">$899.99</span>
+              </div>
+              <button class="add-cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          
+          <div class="product-card" data-category="shopping">
+            <div class="product-image">
+              <img src="assets/laptop.jpg" alt="Laptop">
+            </div>
+            <div class="product-info">
+              <h3>Gaming Laptop</h3>
+              <div class="product-rating">
+                <span class="stars">★★★★★</span>
+                <span>(4.7)</span>
+              </div>
+              <div class="product-price">
+                <span class="price">$1,299.99</span>
+                <span class="original-price">$1,599.99</span>
+              </div>
+              <button class="add-cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          
+          <div class="product-card" data-category="shopping">
+            <div class="product-image">
+              <img src="assets/wireless earbuds.jpg" alt="Headphones">
+            </div>
+            <div class="product-info">
+              <h3>Wireless Headphones</h3>
+              <div class="product-rating">
+                <span class="stars">★★★★★</span>
+                <span>(4.8)</span>
+              </div>
+              <div class="product-price">
+                <span class="price">$89.99</span>
+                <span class="original-price">$129.99</span>
+              </div>
+              <button class="add-cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="transport" class="section-transport product-section" data-aos="fade-up">
+      <div class="container">
+        <div class="section-header">
+          <h2>Travel & Transport</h2>
+          <a href="transport.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="product-grid" id="transport-products">
+          <!-- Transport services will be loaded here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" data-aos="fade-up">
+      <div class="container">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="testimonials-carousel" id="testimonials-carousel">
+          <div class="testimonial-card active">
+            <div class="testimonial-content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>"Amazing service! Got my groceries delivered within 2 hours. Fresh and quality products."</p>
+              <div class="testimonial-author">
+                <img src="https://via.placeholder.com/50x50/2563eb/ffffff?text=JS" alt="John Smith">
+                <div>
+                  <h4>John Smith</h4>
+                  <span>Regular Customer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>"Best prices on electronics! Saved 40% on my new laptop. Highly recommended!"</p>
+              <div class="testimonial-author">
+                <img src="https://via.placeholder.com/50x50/f43f5e/ffffff?text=MS" alt="Maria Santos">
+                <div>
+                  <h4>Maria Santos</h4>
+                  <span>Verified Buyer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>"Booked my vacation through Nexusnow. Smooth booking process and great deals!"</p>
+              <div class="testimonial-author">
+                <img src="https://via.placeholder.com/50x50/0ea5e9/ffffff?text=DJ" alt="David Johnson">
+                <div>
+                  <h4>David Johnson</h4>
+                  <span>Travel Enthusiast</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-dots" id="testimonial-dots"></div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section" data-aos="fade-up">
+      <div class="container">
+        <div class="newsletter-content">
+          <div class="newsletter-text">
+            <h2>Stay Updated</h2>
+            <p>Get the latest deals, offers, and updates delivered to your inbox</p>
+          </div>
+          <div class="newsletter-form">
+            <div class="email-input-group">
+              <input type="email" placeholder="Enter your email address" id="newsletter-email">
+              <button type="submit" id="newsletter-submit">
+                <i class="fas fa-paper-plane"></i>
+                Subscribe
+              </button>
+            </div>
+            <div class="newsletter-benefits">
+              <span><i class="fas fa-check"></i> Exclusive deals</span>
+              <span><i class="fas fa-check"></i> Early access</span>
+              <span><i class="fas fa-check"></i> No spam</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Sections -->
+    <section id="my-bookings" class="section-my-bookings" style="display:none"></section>
+    <section id="cart" class="section-cart" style="display:none"></section>
+    <section id="checkout" class="section-checkout" style="display:none"></section>
+    <section id="orders" class="section-orders" style="display:none"></section>
+    <section id="admin" class="section-admin" style="display:none"></section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fas fa-shopping-bag"></i>
+            <span>Nexusnow</span>
+          </div>
+          <p>Your one-stop destination for groceries, shopping, and travel bookings.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="grocery.html">Grocery</a></li>
+            <li><a href="shopping.html">Shopping</a></li>
+            <li><a href="transport.html">Transport</a></li>
+            <li><a href="#deals">Deals & Offers</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="helpcenter.html">Help Center</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#returns">Returns</a></li>
+            <li><a href="orders.html">Track Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#press">Press</a></li>
+            <li><a href="#partners">Partners</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Download App</h3>
+          <div class="app-downloads">
+            <a href="#" class="app-btn">
+              <i class="fab fa-apple"></i>
+              <div>
+                <span>Download on the</span>
+                <strong>App Store</strong>
+              </div>
+            </a>
+            <a href="#" class="app-btn">
+              <i class="fab fa-google-play"></i>
+              <div>
+                <span>Get it on</span>
+                <strong>Google Play</strong>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2024 Nexusnow. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="about.html">Privacy Policy</a>
+            <a href="about.html">Terms of Service</a>
+            <a href="about.html">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Loading Overlay -->
+  <div id="loading-overlay" class="loading-overlay">
+    <div class="loading-spinner">
+      <div class="spinner"></div>
+      <p>Loading...</p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/order-utils.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html> 

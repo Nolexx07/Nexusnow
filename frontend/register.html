@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Nexusnow</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body style="background: linear-gradient(135deg, #f6f8fa 0%, #23272f 100%); min-height: 100vh;">
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html"><i class="fas fa-shopping-basket"></i> Nexusnow</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="grocery.html">Grocery</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li><a href="transport.html">Transport</a></li>
+        <li><a href="orders.html"><i class="fas fa-box"></i> Orders</a></li>
+        <li><a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a></li>
+        <li><a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> <span class="cart-count" id="cart-count">0</span></a></li>
+        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+        <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="helpcenter.html"><i class="fas fa-question-circle"></i> Help Center</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><button id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+      <button class="hamburger" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+  <header>
+    <div class="top-appbar">
+      <div class="top-appbar-row">
+        <a href="index.html" class="top-appbar-logo"><i class="fas fa-shopping-basket"></i> Nexusnow</a>
+      </div>
+      <div class="top-appbar-search">
+        <input type="text" placeholder="Search products, brands, categories..." id="register-search-input">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+        <button class="scan-btn"><i class="fas fa-qrcode"></i></button>
+      </div>
+    </div>
+  </header>
+  <nav class="bottom-nav">
+    <a href="index.html" class="bottom-nav-link"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="grocery.html" class="bottom-nav-link"><i class="fas fa-shopping-basket"></i><span>Grocery</span></a>
+    <a href="shopping.html" class="bottom-nav-link"><i class="fas fa-tshirt"></i><span>Shop</span></a>
+    <a href="cart.html" class="bottom-nav-link"><i class="fas fa-shopping-cart"></i><span>Cart</span></a>
+    <a href="profile.html" class="bottom-nav-link"><i class="fas fa-user"></i><span>Profile</span></a>
+  </nav>
+  <div class="container" style="display:flex;justify-content:center;align-items:center;min-height:90vh;margin-top:60px;">
+    <div class="main-content" style="flex:1;display:flex;justify-content:center;align-items:center;">
+      <div class="auth-card">
+        <div class="auth-title">Register</div>
+        <div class="auth-error" id="registerError"></div>
+        <form id="registerForm" class="auth-form" autocomplete="off" novalidate>
+          <div class="input-group floating-label">
+            <input type="text" id="username" name="username" required autocomplete="username" placeholder=" " />
+            <label for="username">Username</label>
+          </div>
+          <div class="input-group floating-label">
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder=" " />
+            <label for="email">Email address</label>
+          </div>
+          <div class="input-group floating-label">
+            <input type="password" id="password" name="password" required autocomplete="new-password" placeholder=" " />
+            <label for="password">Password</label>
+          </div>
+          <button type="submit" id="registerBtn">Register <span class="auth-spinner" id="registerSpinner"></span></button>
+        </form>
+        <a href="login.html" class="auth-link">Already have an account? Login</a>
+      </div>
+    </div>
+  </div>
+  <footer style="margin-top:2rem;text-align:center;color:#888;font-size:0.95rem;">&copy; 2024 Nexusnow. All rights reserved.</footer>
+  <script src="js/register.js"></script>
+</body>
+</html> 

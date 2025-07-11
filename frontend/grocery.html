@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexusnow - Grocery</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/grocery.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html"><i class="fas fa-shopping-basket"></i> Nexusnow</a>
+      </div>
+      <div class="desktop-search" style="display: flex; align-items: center; margin-left: 1.5rem;">
+        <input type="text" placeholder="Search..." class="desktop-search-input" style="padding: 0.4rem 0.8rem; border-radius: 1.2rem; border: 1px solid #e5e7eb; font-size: 1rem; min-width: 180px; max-width: 240px;">
+        <button class="desktop-search-btn" style="background: none; border: none; color: #2563eb; font-size: 1.2rem; margin-left: 0.2rem; cursor: pointer;"><i class="fas fa-search"></i></button>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="grocery.html">Grocery</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li><a href="transport.html">Transport</a></li>
+        <li><a href="orders.html"><i class="fas fa-box"></i> Orders</a></li>
+        <li><a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a></li>
+        <li><a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> <span class="cart-count" id="cart-count">0</span></a></li>
+        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+        <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="helpcenter.html"><i class="fas fa-question-circle"></i> Help Center</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><button id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+      <button class="hamburger" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+  <header>
+    <div class="top-appbar top-appbar-grocery">
+      <div class="top-appbar-row">
+        <a href="index.html" class="top-appbar-logo"><i class="fas fa-shopping-basket"></i> Nexusnow</a>
+      </div>
+      <div class="top-appbar-search">
+        <input type="text" placeholder="Search products, brands, categories..." id="index-search-input">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+        <button class="scan-btn"><i class="fas fa-qrcode"></i></button>
+      </div>
+    </div>
+  </header>
+  <nav class="bottom-nav">
+    <a href="index.html" class="bottom-nav-link"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="grocery.html" class="bottom-nav-link"><i class="fas fa-shopping-basket"></i><span>Grocery</span></a>
+    <a href="shopping.html" class="bottom-nav-link"><i class="fas fa-tshirt"></i><span>Shop</span></a>
+    <a href="cart.html" class="bottom-nav-link"><i class="fas fa-shopping-cart"></i><span>Cart</span></a>
+    <a href="profile.html" class="bottom-nav-link"><i class="fas fa-user"></i><span>Profile</span></a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-banner grocery-hero">
+    <div class="hero-container">
+      <div class="hero-content" data-aos="fade-right">
+        <h1>Fresh Groceries & Daily Essentials</h1>
+        <p>Get fresh vegetables, fruits, dairy, and household essentials delivered to your doorstep. Quality products at the best prices.</p>
+        <ul class="info-highlights">
+          <li>🥬 500+ Fresh Products</li>
+          <li>🚚 Same Day Delivery</li>
+          <li>🔥 Fresh Deals: Up to 50% Off</li>
+          <li>✨ Premium Quality</li>
+        </ul>
+        <a href="#grocery-categories" class="hero-btn primary">Shop Now <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="hero-image" data-aos="fade-left">
+        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=400&q=80" alt="Fresh Groceries">
+        <div class="floating-card card-1"><i class="fas fa-leaf"></i> Fresh</div>
+        <div class="floating-card card-2"><i class="fas fa-truck"></i> Fast Delivery</div>
+      </div>
+    </div>
+    <div class="grocery-promo-banner" id="grocery-promo-banner">
+      <span class="promo-message">Fresh Deals: Up to 50% off on Groceries!</span>
+    </div>
+  </header>
+
+  <!-- Sticky Category Bar -->
+  <div class="grocery-sticky-categories" id="grocery-sticky-categories">
+    <!-- Populated by JS -->
+  </div>
+
+  <!-- Promotion Banners -->
+  <section class="grocery-promo-banners" data-aos="fade-up">
+    <div class="container banner-grid" id="grocery-promo-banners">
+      <!-- Populated by JS -->
+    </div>
+  </section>
+
+  <!-- Flash Deals Banner -->
+  <section class="flash-deals-banner" data-aos="fade-up">
+    <div class="container">
+      <div class="flash-deals-content">
+        <div class="flash-deals-info">
+          <h2><i class="fas fa-bolt"></i> Flash Deals</h2>
+          <p>Limited time offers - Don't miss out!</p>
+          <div class="countdown-timer" id="flash-countdown">
+            <div class="timer-item">
+              <span class="timer-number" id="hours">12</span>
+              <span class="timer-label">Hours</span>
+            </div>
+            <div class="timer-item">
+              <span class="timer-number" id="minutes">30</span>
+              <span class="timer-label">Minutes</span>
+            </div>
+            <div class="timer-item">
+              <span class="timer-number" id="seconds">00</span>
+              <span class="timer-label">Seconds</span>
+            </div>
+          </div>
+        </div>
+        <div class="flash-deals-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" id="flash-progress"></div>
+          </div>
+          <p>65% of deals claimed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Horizontal Carousels for Each Category -->
+  <main class="main-container">
+    <section id="grocery-trending" class="grocery-horizontal-section" data-aos="fade-up">
+      <div class="grocery-horizontal-container" id="grocery-trending-container">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+    <section id="grocery-offers" class="grocery-horizontal-section" data-aos="fade-up">
+      <div class="grocery-horizontal-container" id="grocery-offers-container">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+    <section id="grocery-vegetables" class="grocery-horizontal-section" data-aos="fade-up">
+      <div class="grocery-horizontal-container" id="grocery-vegetables-container">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+    <section id="grocery-fruits" class="grocery-horizontal-section" data-aos="fade-up">
+      <div class="grocery-horizontal-container" id="grocery-fruits-container">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+    <section id="grocery-staples" class="grocery-horizontal-section" data-aos="fade-up">
+      <div class="grocery-horizontal-container" id="grocery-staples-container">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+    <section id="grocery-snacks" class="grocery-horizontal-section" data-aos="fade-up">
+      <div class="grocery-horizontal-container" id="grocery-snacks-container">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+    <section id="grocery-beverages" class="grocery-horizontal-section" data-aos="fade-up">
+      <div class="grocery-horizontal-container" id="grocery-beverages-container">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+    <section id="grocery-dairy" class="grocery-horizontal-section" data-aos="fade-up">
+      <div class="grocery-horizontal-container" id="grocery-dairy-container">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Featured Ad Banners -->
+  <section class="featured-banners" data-aos="fade-up">
+    <div class="container">
+      <div class="banner-grid">
+        <div class="featured-banner organic-banner">
+          <div class="banner-content">
+            <h3>Organic Collection</h3>
+            <p>Fresh organic produce for a healthier lifestyle</p>
+            <button class="banner-btn">Explore Now</button>
+          </div>
+          <div class="banner-image">
+            <i class="fas fa-seedling"></i>
+          </div>
+        </div>
+        <div class="featured-banner delivery-banner">
+          <div class="banner-content">
+            <h3>Same Day Delivery</h3>
+            <p>Order by 2 PM, get delivery by 8 PM</p>
+            <button class="banner-btn">Learn More</button>
+          </div>
+          <div class="banner-image">
+            <i class="fas fa-clock"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Cart Button -->
+  <div class="grocery-floating-cart" id="grocery-floating-cart" aria-label="View cart">
+    <span><i class="fas fa-shopping-cart"></i></span>
+    <span class="cart-count" id="grocery-cart-count">0</span>
+  </div>
+
+  <!-- Cart Sidebar/Modal -->
+  <aside class="grocery-cart-sidebar" id="grocery-cart-sidebar">
+    <div class="cart-sidebar-header">
+      <h2>Your cart</h2>
+      <button class="close-cart" id="close-cart" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-sidebar-content" id="cart-sidebar-content">
+      <!-- Populated by JS -->
+    </div>
+    <div class="cart-sidebar-footer">
+      <div class="cart-subtotal">Subtotal: <span id="cart-subtotal">$0.00</span></div>
+      <button class="checkout-btn" id="cart-checkout-btn">Checkout</button>
+    </div>
+  </aside>
+  <div class="cart-sidebar-overlay" id="cart-sidebar-overlay"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fas fa-shopping-basket"></i>
+            <span>Nexusnow</span>
+          </div>
+          <p>Your one-stop destination for groceries, shopping, and travel bookings.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="grocery.html">Grocery</a></li>
+            <li><a href="shopping.html">Shopping</a></li>
+            <li><a href="transport.html">Transport</a></li>
+            <li><a href="#deals">Deals & Offers</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#help">Help Center</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#returns">Returns</a></li>
+            <li><a href="#tracking">Track Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#press">Press</a></li>
+            <li><a href="#partners">Partners</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Download App</h3>
+          <div class="app-downloads">
+            <a href="#" class="app-btn">
+              <i class="fab fa-apple"></i>
+              <div>
+                <span>Download on the</span>
+                <strong>App Store</strong>
+              </div>
+            </a>
+            <a href="#" class="app-btn">
+              <i class="fab fa-google-play"></i>
+              <div>
+                <span>Get it on</span>
+                <strong>Google Play</strong>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2024 Nexusnow. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="#cookies">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Loading Overlay -->
+  <div id="loading-overlay" class="loading-overlay">
+    <div class="loading-spinner">
+      <div class="spinner"></div>
+      <p>Loading...</p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/order-utils.js"></script>
+  <script src="js/grocery.js"></script>
+  <div id="toast-container"></div>
+</body>
+</html> 

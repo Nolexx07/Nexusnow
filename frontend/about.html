@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexusnow - About Us</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html"><i class="fas fa-shopping-basket"></i> Nexusnow</a>
+      </div>
+      <div class="desktop-search" style="display: flex; align-items: center; margin-left: 1.5rem;">
+        <input type="text" placeholder="Search..." class="desktop-search-input" style="padding: 0.4rem 0.8rem; border-radius: 1.2rem; border: 1px solid #e5e7eb; font-size: 1rem; min-width: 180px; max-width: 240px;">
+        <button class="desktop-search-btn" style="background: none; border: none; color: #2563eb; font-size: 1.2rem; margin-left: 0.2rem; cursor: pointer;"><i class="fas fa-search"></i></button>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="grocery.html">Grocery</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li><a href="transport.html">Transport</a></li>
+        <li><a href="orders.html"><i class="fas fa-box"></i> Orders</a></li>
+        <li><a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a></li>
+        <li><a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> <span class="cart-count" id="cart-count">0</span></a></li>
+        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+        <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="helpcenter.html"><i class="fas fa-question-circle"></i> Help Center</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><button id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+      <button class="hamburger" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+  <header>
+    <div class="top-appbar">
+      <div class="top-appbar-row">
+        <a href="index.html" class="top-appbar-logo"><i class="fas fa-shopping-basket"></i> Nexusnow</a>
+      </div>
+      <div class="top-appbar-search">
+        <input type="text" placeholder="Search products, brands, categories..." id="index-search-input">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+        <button class="scan-btn"><i class="fas fa-qrcode"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <main class="main-container">
+    <section class="about-section">
+      <h1>About Nexusnow</h1>
+      <div class="about-story">
+        <h2>Our Story</h2>
+        <p>Nexusnow was founded with a simple mission: to make everyday essentials accessible, affordable, and enjoyable for everyone. From fresh groceries to the latest products and seamless transport, we bring convenience to your doorstep with a smile. Our journey began in 2022, and today, we proudly serve thousands of happy customers across the country.</p>
+      </div>
+      <div class="about-values">
+        <h2>Our Core Values</h2>
+        <ul>
+          <li><i class="fas fa-leaf"></i> Customer First</li>
+          <li><i class="fas fa-bolt"></i> Innovation</li>
+          <li><i class="fas fa-hand-holding-heart"></i> Trust & Transparency</li>
+          <li><i class="fas fa-globe"></i> Sustainability</li>
+          <li><i class="fas fa-users"></i> Community</li>
+        </ul>
+      </div>
+      <div class="about-team">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+          <div class="team-card"><img src="assets/team1.jpg" alt="Team Member"><div class="team-name">Malkam Sathvik</div><div class="team-role">Founder & CEO</div></div>
+          <div class="team-card"><img src="assets/team2.jpg" alt="Team Member"><div class="team-name">Rahul Mehta</div><div class="team-role">CTO</div></div>
+          <div class="team-card"><img src="assets/team3.jpg" alt="Team Member"><div class="team-name">Ayesha Khan</div><div class="team-role">Head of Operations</div></div>
+          <div class="team-card"><img src="assets/team4.jpg" alt="Team Member"><div class="team-name">Vikram Patel</div><div class="team-role">Lead Designer</div></div>
+        </div>
+      </div>
+      <div class="about-timeline">
+        <h2>Our Journey</h2>
+        <ul class="timeline-list">
+          <li><span class="timeline-year">2022</span> Nexusnow founded</li>
+          <li><span class="timeline-year">2023</span> Launched grocery, shopping, and transport services</li>
+          <li><span class="timeline-year">2024</span> Reached 10,000+ customers and expanded nationwide</li>
+        </ul>
+      </div>
+      <div class="about-contact">
+        <h2>Connect With Us</h2>
+        <div class="about-social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="about-contact-info">
+          <span><i class="fas fa-envelope"></i> support@nexusnow.com</span>
+          <span><i class="fas fa-phone"></i> 1800-123-456</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fas fa-shopping-basket"></i>
+            <span>Nexusnow</span>
+          </div>
+          <p>Your one-stop destination for groceries, shopping, and travel bookings.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="grocery.html">Grocery</a></li>
+            <li><a href="shopping.html">Shopping</a></li>
+            <li><a href="transport.html">Transport</a></li>
+            <li><a href="#deals">Deals & Offers</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="helpcenter.html">Help Center</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#returns">Returns</a></li>
+            <li><a href="#tracking">Track Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#press">Press</a></li>
+            <li><a href="#partners">Partners</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2024 Nexusnow. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="#cookies">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/order-utils.js"></script>
+</body>
+</html> 

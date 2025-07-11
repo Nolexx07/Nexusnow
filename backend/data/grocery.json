@@ -1,0 +1,72 @@
+[
+  {
+    "category": "Trending",
+    "products": [
+      {"id": 1, "name": "Avocado", "price": 3.5, "image": "avocado.jpg", "tags": ["fresh", "superfood"], "deal": "20% off"},
+      {"id": 2, "name": "Quinoa", "price": 5.0, "image": "quinoa.jpg", "tags": ["healthy", "grain"]},
+      {"id": 3, "name": "Kale", "price": 2.2, "image": "kale.jpg", "tags": ["organic", "green"]},
+      {"id": 17, "name": "Blueberries", "price": 4.5, "image": "blueberries.jpg", "tags": ["antioxidant", "fruit"]},
+      {"id": 18, "name": "Chia Seeds", "price": 3.8, "image": "chia.jpg", "tags": ["superfood", "fiber"]}
+    ]
+  },
+  {
+    "category": "Offers",
+    "products": [
+      {"id": 4, "name": "Banana (1kg)", "price": 1.5, "image": "banana.jpg", "tags": ["fruit"], "deal": "10% off"},
+      {"id": 5, "name": "Brown Bread", "price": 2.0, "image": "bread.jpg", "tags": ["bakery"], "deal": "15% off"},
+      {"id": 19, "name": "Peanut Butter", "price": 3.2, "image": "peanutbutter.jpg", "tags": ["spread", "protein"], "deal": "Buy 1 Get 1"},
+      {"id": 20, "name": "Greek Yogurt", "price": 2.5, "image": "yogurt.jpg", "tags": ["dairy", "probiotic"], "deal": "5% off"}
+    ]
+  },
+  {
+    "category": "Vegetables",
+    "products": [
+      {"id": 6, "name": "Tomato", "price": 2.5, "image": "tomato.jpg", "tags": ["fresh", "organic"]},
+      {"id": 7, "name": "Broccoli", "price": 3.0, "image": "broccoli.jpg", "tags": ["green", "healthy"]},
+      {"id": 8, "name": "Carrot", "price": 1.8, "image": "carrot.jpg", "tags": ["crunchy", "organic"]},
+      {"id": 21, "name": "Spinach", "price": 2.0, "image": "spinach.jpg", "tags": ["leafy", "iron"]},
+      {"id": 22, "name": "Potato", "price": 1.2, "image": "potato.jpg", "tags": ["staple", "root"]},
+      {"id": 23, "name": "Onion", "price": 1.5, "image": "onion.jpg", "tags": ["aromatic", "essential"]}
+    ]
+  },
+  {
+    "category": "Fruits",
+    "products": [
+      {"id": 9, "name": "Apple", "price": 2.0, "image": "apple.jpg", "tags": ["fresh", "red"]},
+      {"id": 10, "name": "Orange", "price": 2.2, "image": "orange.jpg", "tags": ["citrus", "vitamin C"]},
+      {"id": 24, "name": "Mango", "price": 3.0, "image": "mango.jpg", "tags": ["tropical", "sweet"]},
+      {"id": 25, "name": "Pineapple", "price": 2.8, "image": "pineapple.jpg", "tags": ["tropical", "juicy"]},
+      {"id": 26, "name": "Grapes", "price": 2.5, "image": "grapes.jpg", "tags": ["seedless", "snack"]}
+    ]
+  },
+  {
+    "category": "Staples",
+    "products": [
+      {"id": 11, "name": "Basmati Rice", "price": 12.0, "image": "rice.jpg", "tags": ["staple", "premium"]},
+      {"id": 12, "name": "Olive Oil", "price": 8.5, "image": "oliveoil.jpg", "tags": ["healthy", "imported"]},
+      {"id": 27, "name": "Whole Wheat Flour", "price": 3.0, "image": "flour.jpg", "tags": ["baking", "fiber"]},
+      {"id": 28, "name": "Sugar", "price": 2.2, "image": "sugar.jpg", "tags": ["sweetener", "essential"]},
+      {"id": 29, "name": "Salt", "price": 1.0, "image": "salt.jpg", "tags": ["essential", "mineral"]}
+    ]
+  },
+  {
+    "category": "Snacks",
+    "products": [
+      {"id": 13, "name": "Almonds (500g)", "price": 6.0, "image": "almonds.jpg", "tags": ["deal", "healthy"], "deal": "Buy 1 Get 1"},
+      {"id": 14, "name": "Chips", "price": 2.5, "image": "chips.jpg", "tags": ["crispy"]},
+      {"id": 30, "name": "Popcorn", "price": 1.8, "image": "popcorn.jpg", "tags": ["movie", "snack"]},
+      {"id": 31, "name": "Cookies", "price": 2.2, "image": "cookies.jpg", "tags": ["baked", "sweet"]},
+      {"id": 32, "name": "Granola Bar", "price": 1.5, "image": "granola.jpg", "tags": ["energy", "healthy"]}
+    ]
+  },
+  {
+    "category": "Beverages",
+    "products": [
+      {"id": 15, "name": "Orange Juice", "price": 3.0, "image": "juice.jpg", "tags": ["fresh", "drink"]},
+      {"id": 16, "name": "Green Tea", "price": 4.0, "image": "greentea.jpg", "tags": ["healthy", "tea"]},
+      {"id": 33, "name": "Coffee", "price": 5.0, "image": "coffee.jpg", "tags": ["morning", "energy"]},
+      {"id": 34, "name": "Milk", "price": 2.0, "image": "milk.jpg", "tags": ["dairy", "calcium"]},
+      {"id": 35, "name": "Lemonade", "price": 2.5, "image": "lemonade.jpg", "tags": ["refreshing", "summer"]}
+    ]
+  }
+] 

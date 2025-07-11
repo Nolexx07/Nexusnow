@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexusnow - Help Center</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/helpcenter.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html"><i class="fas fa-shopping-basket"></i> Nexusnow</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="grocery.html">Grocery</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li><a href="transport.html">Transport</a></li>
+        <li><a href="orders.html"><i class="fas fa-box"></i> Orders</a></li>
+        <li><a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a></li>
+        <li><a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> <span class="cart-count" id="cart-count">0</span></a></li>
+        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+        <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="helpcenter.html"><i class="fas fa-question-circle"></i> Help Center</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><button id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+      <button class="hamburger" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+  <header>
+    <div class="top-appbar">
+      <div class="top-appbar-row">
+        <a href="index.html" class="top-appbar-logo"><i class="fas fa-shopping-basket"></i> Nexusnow</a>
+      </div>
+      <div class="top-appbar-search">
+        <input type="text" placeholder="Search products, brands, categories..." id="helpcenter-search-input">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+        <button class="scan-btn"><i class="fas fa-qrcode"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Help Center Section -->
+  <main class="main-container">
+    <section class="helpcenter-section">
+      <h1>Help Center</h1>
+      <div class="help-search-bar">
+        <input type="text" id="help-search-input" placeholder="Search help topics, e.g. order status, returns..." autocomplete="off" />
+        <button id="help-search-btn"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="help-topics-grid">
+        <div class="help-topic-card"><i class="fas fa-box"></i><span>Orders & Tracking</span></div>
+        <div class="help-topic-card"><i class="fas fa-credit-card"></i><span>Payments & Refunds</span></div>
+        <div class="help-topic-card"><i class="fas fa-undo"></i><span>Returns & Cancellations</span></div>
+        <div class="help-topic-card"><i class="fas fa-user"></i><span>Account & Profile</span></div>
+        <div class="help-topic-card"><i class="fas fa-truck"></i><span>Delivery & Shipping</span></div>
+        <div class="help-topic-card"><i class="fas fa-tags"></i><span>Offers & Coupons</span></div>
+        <div class="help-topic-card"><i class="fas fa-question"></i><span>FAQs</span></div>
+        <div class="help-topic-card"><i class="fas fa-headset"></i><span>Contact Support</span></div>
+      </div>
+      <div class="help-contact-section">
+        <h2>Need more help?</h2>
+        <div class="help-contact-methods">
+          <div class="help-contact-card"><i class="fas fa-envelope"></i> <span>Email: <a href="mailto:support@nexusnow.com">support@nexusnow.com</a></span></div>
+          <div class="help-contact-card"><i class="fas fa-phone"></i> <span>Call: <a href="tel:+1800123456">1800-123-456</a></span></div>
+          <div class="help-contact-card"><i class="fas fa-comments"></i> <span>Live Chat: <a href="#">Start Chat</a></span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fas fa-shopping-basket"></i>
+            <span>Nexusnow</span>
+          </div>
+          <p>Your one-stop destination for groceries, shopping, and travel bookings.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="grocery.html">Grocery</a></li>
+            <li><a href="shopping.html">Shopping</a></li>
+            <li><a href="transport.html">Transport</a></li>
+            <li><a href="#deals">Deals & Offers</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#help">Help Center</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#returns">Returns</a></li>
+            <li><a href="#tracking">Track Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#press">Press</a></li>
+            <li><a href="#partners">Partners</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2024 Nexusnow. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="#cookies">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/order-utils.js"></script>
+  <script src="js/helpcenter.js"></script>
+</body>
+</html> 

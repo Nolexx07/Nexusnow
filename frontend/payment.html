@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexusnow - Payment</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/payment.css">
+</head>
+<body>
+  <!-- Header Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html"><i class="fas fa-shopping-basket"></i> Nexusnow</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="grocery.html">Grocery</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li><a href="transport.html">Transport</a></li>
+        <li><a href="orders.html"><i class="fas fa-box"></i> Orders</a></li>
+        <li><a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a></li>
+        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> <span class="cart-count" id="cart-count">0</span></a></li>
+        <li><button id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+      <button class="hamburger" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+  <main class="main-container">
+    <!-- Step Indicator -->
+    <div class="checkout-steps">
+      <div class="step completed"><span class="step-icon"><i class="fas fa-shopping-cart"></i></span>Cart</div>
+      <div class="step completed"><span class="step-icon"><i class="fas fa-map-marker-alt"></i></span>Address</div>
+      <div class="step active"><span class="step-icon"><i class="fas fa-credit-card"></i></span>Payment</div>
+      <div class="step"><span class="step-icon"><i class="fas fa-check-circle"></i></span>Done</div>
+      <div class="checkout-progress"><div class="progress-bar payment"></div></div>
+    </div>
+    <section class="payment-section enhanced-payment">
+      <h1>Choose Payment Method</h1>
+      <form id="payment-form">
+        <div class="payment-methods">
+          <label class="payment-method">
+            <input type="radio" name="method" value="card" checked>
+            <span>💳 Card</span>
+          </label>
+          <label class="payment-method">
+            <input type="radio" name="method" value="upi">
+            <span>📱 UPI</span>
+          </label>
+          <label class="payment-method">
+            <input type="radio" name="method" value="cod">
+            <span>🚚 Cash on Delivery</span>
+          </label>
+          <label class="payment-method">
+            <input type="radio" name="method" value="other">
+            <span>💼 Other</span>
+          </label>
+        </div>
+        <div id="card-fields" class="payment-fields">
+          <label for="card-number">Card Number</label>
+          <input type="text" id="card-number" maxlength="19" placeholder="1234 5678 9012 3456">
+          <label for="expiry">Expiry</label>
+          <input type="text" id="expiry" maxlength="5" placeholder="MM/YY">
+          <label for="cvv">CVV</label>
+          <input type="password" id="cvv" maxlength="4" placeholder="123">
+        </div>
+        <div id="upi-fields" class="payment-fields" style="display:none;">
+          <label for="upi-id">UPI ID</label>
+          <input type="text" id="upi-id" placeholder="yourname@bank">
+        </div>
+        <div id="cod-fields" class="payment-fields" style="display:none;">
+          <p class="cod-info">Pay with cash when your order is delivered.</p>
+        </div>
+        <div id="other-fields" class="payment-fields" style="display:none;">
+          <label for="other-details">Other Payment Details</label>
+          <input type="text" id="other-details" placeholder="Enter details">
+        </div>
+        <button type="submit" id="pay-btn">Pay & Place Order</button>
+      </form>
+      <div id="payment-status"></div>
+    </section>
+  </main>
+  <script src="js/order-utils.js"></script>
+  <script src="js/payment.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html> 

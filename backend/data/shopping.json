@@ -1,0 +1,16 @@
+[
+  {
+    "segment": "Men",
+    "products": [
+      {"id": 301, "name": "T-Shirt", "price": 15, "image": "tshirt.png", "size": ["S","M","L"]},
+      {"id": 302, "name": "Jeans", "price": 40, "image": "jeans.png", "size": ["M","L","XL"]}
+    ]
+  },
+  {
+    "segment": "Women",
+    "products": [
+      {"id": 401, "name": "Dress", "price": 30, "image": "dress.png", "size": ["S","M","L"]},
+      {"id": 402, "name": "Handbag", "price": 50, "image": "handbag.png", "size": []}
+    ]
+  }
+] 

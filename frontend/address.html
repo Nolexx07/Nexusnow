@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexusnow - Delivery Address</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/payment.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html"><i class="fas fa-shopping-basket"></i> Nexusnow</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="grocery.html">Grocery</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li><a href="transport.html">Transport</a></li>
+        <li><a href="orders.html"><i class="fas fa-box"></i> Orders</a></li>
+        <li><a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a></li>
+        <li><a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> <span class="cart-count" id="cart-count">0</span></a></li>
+        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+        <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="helpcenter.html"><i class="fas fa-question-circle"></i> Help Center</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><button id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+      <button class="hamburger" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+  <header>
+    <div class="top-appbar">
+      <div class="top-appbar-row">
+        <a href="index.html" class="top-appbar-logo"><i class="fas fa-shopping-basket"></i> Nexusnow</a>
+      </div>
+      <div class="top-appbar-search">
+        <input type="text" placeholder="Search products, brands, categories..." id="address-search-input">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+        <button class="scan-btn"><i class="fas fa-qrcode"></i></button>
+      </div>
+    </div>
+  </header>
+  <main class="main-container">
+    <!-- Step Indicator -->
+    <div class="checkout-steps">
+      <div class="step completed"><span class="step-icon"><i class="fas fa-shopping-cart"></i></span>Cart</div>
+      <div class="step active"><span class="step-icon"><i class="fas fa-map-marker-alt"></i></span>Address</div>
+      <div class="step"><span class="step-icon"><i class="fas fa-credit-card"></i></span>Payment</div>
+      <div class="step"><span class="step-icon"><i class="fas fa-check-circle"></i></span>Done</div>
+      <div class="checkout-progress"><div class="progress-bar address"></div></div>
+    </div>
+    <section class="address-section enhanced-payment">
+      <h1>Delivery Address</h1>
+      <form id="address-form">
+        <div class="address-fields">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required>
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" required pattern="[0-9]{10,15}">
+          <label for="address">Address</label>
+          <textarea id="address" rows="2" required></textarea>
+          <label for="city">City</label>
+          <input type="text" id="city" required>
+          <label for="state">State</label>
+          <input type="text" id="state" required>
+          <label for="zip">ZIP/Postal Code</label>
+          <input type="text" id="zip" required>
+        </div>
+        <button type="submit" id="address-btn">Continue to Payment</button>
+      </form>
+      <div id="address-status"></div>
+    </section>
+  </main>
+  <script src="js/order-utils.js"></script>
+  <script src="js/address.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html> 

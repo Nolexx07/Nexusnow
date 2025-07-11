@@ -1,0 +1,195 @@
+{
+  "orders": [
+    {
+      "id": "ORD-2025-007",
+      "userId": "default",
+      "date": "2025-07-05",
+      "status": "pending",
+      "total": 7.99,
+      "items": [
+        {
+          "name": "Mixed Nuts (500g)",
+          "price": 7.99,
+          "quantity": 1,
+          "category": "grocery"
+        }
+      ],
+      "deliveryAddress": "123 Main St, City, State 12345",
+      "paymentMethod": "Credit Card",
+      "trackingNumber": "TRK1751703842020",
+      "createdAt": "2025-07-05T08:24:02.030Z",
+      "updatedAt": "2025-07-05T08:24:02.030Z"
+    },
+    {
+      "id": "ORD-2025-006",
+      "userId": "default",
+      "date": "2025-07-05",
+      "status": "pending",
+      "total": 3.49,
+      "items": [
+        {
+          "name": "Fresh Avocado",
+          "price": 3.49,
+          "quantity": 1,
+          "category": "grocery"
+        }
+      ],
+      "deliveryAddress": "123 Main St, City, State 12345",
+      "paymentMethod": "Credit Card",
+      "trackingNumber": "TRK1751703782531",
+      "createdAt": "2025-07-05T08:23:02.541Z",
+      "updatedAt": "2025-07-05T08:23:02.541Z"
+    },
+    {
+      "id": "ORD-2025-005",
+      "userId": "default",
+      "date": "2025-07-05",
+      "status": "pending",
+      "total": 11.97,
+      "items": [
+        {
+          "name": "Organic Quinoa",
+          "price": 5.99,
+          "quantity": 1,
+          "category": "grocery"
+        },
+        {
+          "name": "Fresh Kale",
+          "price": 2.49,
+          "quantity": 1,
+          "category": "grocery"
+        },
+        {
+          "name": "Fresh Avocado",
+          "price": 3.49,
+          "quantity": 1,
+          "category": "grocery"
+        }
+      ],
+      "deliveryAddress": "123 Main St, City, State 12345",
+      "paymentMethod": "Credit Card",
+      "trackingNumber": "TRK1751703756487",
+      "createdAt": "2025-07-05T08:22:36.493Z",
+      "updatedAt": "2025-07-05T08:22:36.493Z"
+    },
+    {
+      "id": "ORD-2025-004",
+      "userId": "default",
+      "date": "2025-07-05",
+      "status": "pending",
+      "total": 11.97,
+      "items": [
+        {
+          "name": "Organic Quinoa",
+          "price": 5.99,
+          "quantity": 1,
+          "category": "grocery"
+        },
+        {
+          "name": "Fresh Kale",
+          "price": 2.49,
+          "quantity": 1,
+          "category": "grocery"
+        },
+        {
+          "name": "Fresh Avocado",
+          "price": 3.49,
+          "quantity": 1,
+          "category": "grocery"
+        }
+      ],
+      "deliveryAddress": "123 Main St, City, State 12345",
+      "paymentMethod": "Credit Card",
+      "trackingNumber": "TRK1751703754923",
+      "createdAt": "2025-07-05T08:22:34.974Z",
+      "updatedAt": "2025-07-05T08:22:34.974Z"
+    },
+    {
+      "id": "ORD-2024-001",
+      "userId": "default",
+      "date": "2024-01-15",
+      "status": "delivered",
+      "total": 89.99,
+      "category": "grocery",
+      "items": [
+        {
+          "name": "Organic Bananas",
+          "price": 4.99,
+          "quantity": 2,
+          "category": "grocery"
+        },
+        {
+          "name": "Fresh Milk",
+          "price": 3.49,
+          "quantity": 1,
+          "category": "grocery"
+        },
+        {
+          "name": "Whole Grain Bread",
+          "price": 2.99,
+          "quantity": 2,
+          "category": "grocery"
+        }
+      ],
+      "deliveryAddress": "123 Main St, City, State 12345",
+      "paymentMethod": "Credit Card",
+      "trackingNumber": "TRK123456789",
+      "createdAt": "2024-01-15T10:30:00Z",
+      "updatedAt": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": "ORD-2024-002",
+      "userId": "default",
+      "date": "2024-01-10",
+      "status": "shipped",
+      "total": 156.75,
+      "category": "shopping",
+      "items": [
+        {
+          "name": "Wireless Headphones",
+          "price": 89.99,
+          "quantity": 1,
+          "category": "shopping"
+        },
+        {
+          "name": "Phone Case",
+          "price": 19.99,
+          "quantity": 2,
+          "category": "shopping"
+        },
+        {
+          "name": "Screen Protector",
+          "price": 12.99,
+          "quantity": 1,
+          "category": "shopping"
+        }
+      ],
+      "deliveryAddress": "123 Main St, City, State 12345",
+      "paymentMethod": "PayPal",
+      "trackingNumber": "TRK987654321",
+      "createdAt": "2024-01-10T14:20:00Z",
+      "updatedAt": "2024-01-10T14:20:00Z"
+    },
+    {
+      "id": "ORD-2024-003",
+      "userId": "default",
+      "date": "2024-01-05",
+      "status": "processing",
+      "total": 45.5,
+      "category": "transport",
+      "items": [
+        {
+          "name": "Bus Ticket - City to Airport",
+          "price": 22.75,
+          "quantity": 2,
+          "category": "transport"
+        }
+      ],
+      "deliveryAddress": "N/A",
+      "paymentMethod": "Credit Card",
+      "trackingNumber": "N/A",
+      "createdAt": "2024-01-05T09:15:00Z",
+      "updatedAt": "2024-01-05T09:15:00Z"
+    }
+  ]
+}
