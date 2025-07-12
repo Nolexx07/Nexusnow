@@ -50,7 +50,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: var(--font-main);
-  background: var(--color-bg);
+  background: #fff;
   color: var(--color-text);
   transition: background var(--transition), color var(--transition);
   scroll-behavior: smooth;
@@ -921,7 +921,7 @@ section {
 
 /* Hero Banner */
 .hero-banner {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  background: linear-gradient(135deg, #ffb347 0%, #ff5e62 100%);
   color: white;
   padding: 15rem 0 7.5rem 0;
   position: relative;

@@ -33,6 +33,13 @@ document.addEventListener('DOMContentLoaded', function() {
       const data = await res.json();
       if (res.ok && data.token) {
         localStorage.setItem('nexusnow_token', data.token);
+        // Store user info for profile page
+        if (data.user) {
+          localStorage.setItem('nexusnow_user', JSON.stringify(data.user));
+        } else {
+          // Fallback: store minimal info
+          localStorage.setItem('nexusnow_user', JSON.stringify({ email: email, firstName: '', lastName: '' }));
+        }
         window.location.href = 'profile.html';
       } else {
         loginError.textContent = data.error || 'Login failed.';

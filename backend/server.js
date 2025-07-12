@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
@@ -13,8 +14,7 @@ const ordersRouter = require('./routes/orders');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
-const mongoURI = 'mongodb://localhost:27017/nexusnow'; // 'nexusnow' is your database name
+const mongoURI = process.env.MONGODB_URI;
 
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
