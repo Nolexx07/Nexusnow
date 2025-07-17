@@ -3,7 +3,7 @@ const router = express.Router();
 const fs = require('fs').promises;
 const path = require('path');
 const ordersDataPath = path.join(__dirname, '../data/orders.json');
-const Order = require('../models/Order');
+const Order = require('../models/order');
 
 // Read orders data
 async function readOrdersData() {
