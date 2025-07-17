@@ -15,7 +15,7 @@ const demoProducts = [
 
 async function loadProducts() {
   try {
-    const res = await fetch('/api/grocery');
+    const res = await fetch('https://nexusnow.onrender.com/api/grocery');
     const data = await res.json();
     // Flatten all products from all categories
     products = data.flatMap(cat => cat.products.map(p => ({
@@ -130,7 +130,7 @@ function renderResults(results) {
       this.style.background = '#b91c1c';
       this.disabled = true;
       try {
-        await fetch('/api/wishlist', {
+        await fetch('https://nexusnow.onrender.com/api/wishlist', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

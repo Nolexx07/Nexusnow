@@ -74,7 +74,7 @@ async function loadOrdersFromBackend() {
         showLoading(true);
         const token = localStorage.getItem('token');
         // Fetch orders from backend
-        const response = await fetch('/api/orders', {
+        const response = await fetch('https://nexusnow.onrender.com/api/orders', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -462,7 +462,7 @@ async function removeOrder(orderId) {
     try {
         showLoading(true);
         
-        const response = await fetch(`/api/orders/${orderId}`, {
+        const response = await fetch(`https://nexusnow.onrender.com/api/orders/${orderId}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

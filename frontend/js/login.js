@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         loginError.textContent = 'Password is required.';
         return;
       }
-      const res = await fetch('/api/auth/login', {
+      const res = await fetch('https://nexusnow.onrender.com/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })

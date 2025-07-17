@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         registerError.textContent = 'Password must be at least 6 characters.';
         return;
       }
-      const res = await fetch('/api/auth/register', {
+      const res = await fetch('https://nexusnow.onrender.com/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, email, password })
